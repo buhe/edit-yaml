@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CodeMirror, { ReactCodeMirrorProps } from '@uiw/react-codemirror';
+import { StreamLanguage } from '@codemirror/language';
+import { yaml } from '@codemirror/legacy-modes/mode/yaml';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx buhe</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default function App() {
+  const queryString = window.location.search
+  // it will look like this: ?product=shirt&color=blue&newuser&size=m
+
+  // parse the query string's paramters
+  const urlParams = new URLSearchParams(queryString)
+
+  // To get a parameter simply write something like the follwing
+  const items = urlParams.get('items') || ""
+  const theme = urlParams.get('theme') || "light" as any
+
+  console.log(items)
+
+  return <CodeMirror theme={theme} value={items} height="400px" extensions={[StreamLanguage.define(yaml)]} />;
 }
-
-export default App;
