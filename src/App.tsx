@@ -35,16 +35,19 @@ export default function App() {
           className="cm-outer-container"
         />
       </div>
-    <button onClick={() => {
-      console.log("load")
+    <div className="btn-container">
+      <button className="btn" onClick={() => {
+        console.log("load")
 
-      let w = window as any;
-      if (w.webkit && w.webkit.messageHandlers && w.webkit.messageHandlers.toggleMessageHandler) {
-        w.webkit.messageHandlers.toggleMessageHandler.postMessage({
-          "done": "true"
-        });
-      }
+        let w = window as any;
+        if (w.webkit && w.webkit.messageHandlers && w.webkit.messageHandlers.toggleMessageHandler) {
+          w.webkit.messageHandlers.toggleMessageHandler.postMessage({
+            "done": "true"
+          });
+        }
 
-    }}>Load reource via yaml</button>
+      }}>Load reource via yaml</button>
+      </div>
+    
     </div>
 }

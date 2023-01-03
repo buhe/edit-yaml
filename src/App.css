@@ -45,3 +45,19 @@ body,
   white-space: pre-wrap;
   word-break: normal;
 }
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  margin: 10px;
+  width: 288px;
+  border-color: #007AFF;
+  color: #007AFF;
+  border-radius: 8px;
+  background: none;
+  font-size: large;
+}
