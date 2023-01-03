@@ -14,7 +14,7 @@ export default function App() {
 
   // To get a parameter simply write something like the follwing
   const items = urlParams.get('items') || ""
-  const theme = urlParams.get('theme') || "light" as any
+  const theme = urlParams.get('theme') || "dark" as any
 
   console.log(items)
 
@@ -35,8 +35,8 @@ export default function App() {
           className="cm-outer-container"
         />
       </div>
-    <div className="btn-container">
-      <button className="btn" onClick={() => {
+    <div className={theme == "light" ? "btn-container" : "btn-container-dark" }>
+      <button className={theme == "light" ? "btn" : "btn-dark"} onClick={() => {
         console.log("load")
 
         let w = window as any;
