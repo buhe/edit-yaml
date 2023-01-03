@@ -46,7 +46,7 @@ export default function App() {
           });
         }
 
-      }}>Load reource via yaml</button>
+      }}>Update reource via yaml</button>
       </div>
     
     </div>
