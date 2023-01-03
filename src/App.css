@@ -57,11 +57,11 @@ body,
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #282c34;
+  background: #1C1C1E;
 }
 
 .btn {
-  margin: 10px;
+  margin: 15px;
   width: 288px;
   border: hidden;
   color: #007AFF;
@@ -70,10 +70,10 @@ body,
 }
 
 .btn-dark {
-  margin: 10px;
+  margin: 15px;
   width: 288px;
   border: hidden;
   color: #007AFF;
-  background: #282c34;
+  background: #1C1C1E;
   font-size: large;
 }
